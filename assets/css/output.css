@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: hsl(27, 66%, 92%);
+}
+
+header, main {
+  width: 20rem;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  border-radius: 0.5rem;
+  background-color: hsl(10, 79%, 65%);
+  color: hsl(33, 100%, 98%);
+}
+
+main {
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  background-color: hsl(33, 100%, 98%);
+}
+main h2, main .percent {
+  color: hsl(25, 47%, 15%);
+}
+main p {
+  color: hsl(28, 10%, 53%);
+}
+
+.chart-container {
+  height: 11rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  gap: 0;
+}
+
+.chart-item {
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.chart-item:hover .amount {
+  opacity: 1;
+}
+
+.amount {
+  opacity: 0;
+  padding: 0.3rem;
+  background-color: hsl(25, 47%, 15%);
+  border-radius: 0.2rem;
+  color: hsl(33, 100%, 98%);
+  font-size: 0.8rem;
+}
+
+.item {
+  width: 100%;
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 0.2rem;
+}
+.item:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+}
+
+#wed {
+  background-color: hsl(186, 34%, 60%);
+}
+
+.total {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  border-top: 1px solid hsl(27, 66%, 92%);
+}
+.total p {
+  font-size: 0.8rem;
+}
+.total h2 {
+  font-size: 2rem;
+}
+
+.text-right {
+  align-self: end;
+  text-align: right;
+}
+
+.percent {
+  font-weight: bold;
+}
+
+.attribution a {
+  color: hsl(28, 10%, 53%);
+}
+.attribution a:hover {
+  color: hsl(10, 79%, 65%);
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  header, main {
+    width: 27rem;
+  }
+  main {
+    padding: 2rem;
+  }
+  .chart-item {
+    width: 2.5rem;
+  }
+  .total {
+    margin-top: 2rem;
+    padding-top: 2rem;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

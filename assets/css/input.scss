@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+$soft-red: hsl(10, 79%, 65%);
+$cyan: hsl(186, 34%, 60%);
+$dark-brown: hsl(25, 47%, 15%);
+$medium-brown: hsl(28, 10%, 53%);
+$cream: hsl(27, 66%, 92%);
+$very-pale-orange: hsl(33, 100%, 98%);
+
+@mixin flex ($direction, $justify, $align, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    @include flex(column, center, center, 1rem);
+    background-color: $cream;
+}
+
+header, main {
+    width: 20rem;
+}
+header {
+    padding: 1rem;
+    @include flex(row, space-between, center);
+
+    border-radius: .5rem;
+    background-color: $soft-red;   
+    color: $very-pale-orange; 
+}
+
+main {
+    padding: 2rem 1rem;
+    border-radius: .5rem;
+    background-color: $very-pale-orange;
+
+    h2, .percent {
+        color: $dark-brown;
+    }
+    p {
+        color: $medium-brown;
+    }
+}
+
+.chart-container {
+    height: 11rem;
+    @include flex(row, space-between, end);
+
+}
+.chart-item {
+    width: 2rem;
+    @include flex(column, center, center, .5rem);
+    
+    &:hover .amount {
+        opacity: 1;
+    }
+}
+.amount {
+    opacity: 0;
+    padding: .3rem;
+
+    background-color: $dark-brown;
+    border-radius: .2rem;
+    color: $very-pale-orange;
+    font-size: .8rem;
+}
+.item {
+    width: 100%;
+    background-color: $soft-red;
+    border-radius: .2rem;
+
+    &:hover {
+        cursor: pointer;
+        filter: brightness(1.2);
+    }
+}
+#wed {
+    background-color: $cyan;
+}
+ .total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    @include flex(row, space-between, center);
+
+    border-top: 1px solid $cream;
+
+    p {
+        font-size: .8rem;
+    }
+    h2 {
+        font-size: 2rem; 
+    }
+ }
+ .text-right {
+    align-self: end;
+    text-align: right;
+ }
+ .percent {
+    font-weight: bold;
+ }
+
+ .attribution a {
+    color: $medium-brown;
+
+    &:hover {
+        color:$soft-red;
+        text-decoration: none;
+    }
+ }
+
+@media (min-width: 768px) {
+    header, main {
+        width: 27rem;
+    }
+    main {
+        padding: 2rem;
+    }
+    .chart-item {
+        width: 2.5rem;
+    }
+    .total {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
