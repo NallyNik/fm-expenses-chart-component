@@ -84,10 +84,6 @@ main p {
   filter: brightness(1.2);
 }
 
-#wed {
-  background-color: hsl(186, 34%, 60%);
-}
-
 .total {
   margin-top: 1rem;
   padding-top: 1rem;

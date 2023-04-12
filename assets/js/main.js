@@ -32,6 +32,17 @@ function updateDays (data) {
     updateItem(data);
     updateDays(data);
 })();
-    
+
+
+//painting the current day of the week
+( () => {
+    let today = new Date();
+    let dayOfWeek = today.getDay();
+    let weekdays = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+    let dayOfWeekString = weekdays[dayOfWeek];
+    const day = document.getElementById(dayOfWeekString);
+    day.style.backgroundColor = 'hsl(186, 34%, 60%)';
+})();
+
 
     
