@@ -4,35 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href=".assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/output.css">
   
   <title>Frontend Mentor | Expenses chart component</title>
 
 </head>
 <body>
+  <header>
+    <div>
+      <p> My balance</p>
+      <h1>$921.48</h1>
+    </div>
+    <img src="./assets/images/logo.svg" alt="" class="logo">
+  </header>
 
-  My balance
-  $921.48
+  <main>
+    <section class="chart">
+      <h2>Spending - Last 7 days</h2>
+      <div class="chart-container">
+        <div class="chart-item">
+          <span class="amount"></span>
+          <div class="item" id="mon"></div>
+          <p class="day"></p>
+        </div>
+        <div class="chart-item">
+          <span class="amount"></span>
+          <div class="item" id="tue"></div>
+          <p class="day"></p>
+        </div>
+        <div class="chart-item">
+          <span class="amount"></span>
+          <div class="item" id="wed"></div>
+          <p class="day"></p>
+        </div>
+        <div class="chart-item">
+          <span class="amount"></span>
+          <div class="item" id="thu"></div>
+          <p class="day"></p>
+        </div>
+        <div class="chart-item">
+          <span class="amount"></span>
+          <div class="item" id="fri"></div>
+          <p class="day"></p>
+        </div>
+        <div class="chart-item">
+          <span class="amount"></span>
+          <div class="item" id="sat"></div>
+          <p class="day"></p>
+        </div>
+        <div class="chart-item">
+          <span class="amount"></span>
+          <div class="item" id="sun"></div>
+          <p class="day"></p>
+        </div>
+      </div>
+    </section>
 
-  Spending - Last 7 days
+    <section class="total">
+      <div>
+        <p>Total this month</p>
+        <h2>$478.33</h2>
+      </div>
+      <div class="text-right">
+        <p class="percent">+2.4%</p>
+        <p>from last month</p>
+      </div>
+    </section>
+  </main>
+ 
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/NallyNik" target="_blank">NallyNik</a>.
+    </div>
+  </footer>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
